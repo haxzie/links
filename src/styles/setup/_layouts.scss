@@ -1,0 +1,23 @@
+body, #app {
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+// Colors
+$bg-color: var(--color-background);
+$dot-color: var(--color-dots);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 22px;
+
+.dotted-bg {
+	background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+}

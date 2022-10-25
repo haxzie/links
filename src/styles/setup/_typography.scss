@@ -1,0 +1,76 @@
+body {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    line-height: 1.5em;
+    font-family: "Inter", sans-serif;
+    color: var(--color-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    span,
+    p,
+    pre,
+    label {
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+        color: var(--color-font);
+        font-family: "Inter", sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        outline: none;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+    &:not(:hover) {
+        text-overflow: ellipsis;
+    }
+    /* animate on either hover or focus */
+}
+.marquee {
+    &:hover {
+        span {
+            display: inline-block;
+            animation-name: scroll-text;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            /* FYI this would be the shorthand:
+        animation: scroll-text 5s ease 0s 2 normal;
+      */
+        }
+    }
+
+    /* define the animation */
+    @keyframes scroll-text {
+        0% {
+            transform: translateX(0%);
+        }
+        90% {
+            transform: translateX(-100%);
+        }
+        95% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}

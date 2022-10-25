@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Inter;
+    font-weight: 400;
+    src: url('~/assets/fonts/inter/Inter-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Inter;
+    font-weight: 500;
+    src: url('~/assets/fonts/inter/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: 600;
+    src: url('~/assets/fonts/inter/Inter-SemiBold.ttf') format('truetype');
+}
+
+//   12px
+.font-xsm {
+    font-size: 0.75rem;
+  }
+ 
+//   14px
+  .font {
+    font-size: 0.875rem;
+  }
+ 
+//   16px
+  .font {
+    font-size: 1rem;
+  }
+
+ //   20px 
+  .font-h4 {
+    font-size: 1.25rem;
+  }
+
+//   28px
+  .font-h3 {
+    font-size: 1.75rem;
+  }
+
+//   30px
+  .font-h2 {
+    font-size: 1.875rem;
+  }
+  
+//   48px
+  .font-h1 {
+    font-size: 3rem;
+  }
+  
