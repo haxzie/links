@@ -7,11 +7,9 @@
       :href="`${link.link}`"
     >
       <div class="icon">
-        <div class="bg" :style="{ background: link.color }"></div>
         <component
           :is="link.icon"
           size="40"
-          :color="link.color"
           class="svg-icon"
         />
       </div>
