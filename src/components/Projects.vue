@@ -4,7 +4,7 @@
       v-for="link in links"
       :key="link.id"
       class="link"
-      :href="`https://${link.link}`"
+      :href="`${link.link}`"
     >
       <div class="icon">
         <div class="bg" :style="{ background: link.color }"></div>
