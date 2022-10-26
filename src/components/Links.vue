@@ -66,6 +66,9 @@ const links = [
 .links {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  height: 360px;
+  overflow: auto;
 
   .link {
     display: flex;
@@ -73,12 +76,12 @@ const links = [
     align-items: center;
     justify-content: flex-start;
     padding: 15px;
-    border-bottom: 1px solid var(--color-border);
+    border-radius: 10px;
 
     .icon {
         width: 40px;
         height: 40px;
-        border: 1px solid var(--color-border);
+        //border: 1px solid var(--color-border);
         margin-right: 15px;
         border-radius: 12.5px;
         display: flex;

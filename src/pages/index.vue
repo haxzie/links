@@ -18,11 +18,13 @@
           v-for="tab in tabs"
           :key="tab.id"
           :class="['tab', { active: activeTab === tab.id }]"
+          @click="activeTab = tab.id"
         >
           <span>{{ tab.name }}</span>
         </div>
       </div>
-      <Links />
+      <Links v-if="activeTab === 'links'"/>
+      <Projects v-else/>
     </div>
   </div>
 </template>
@@ -30,6 +32,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Links from "@components/Links.vue";
+import Projects from "@components/Projects.vue";
 import PageBackground from "@components/PageBackground.vue";
 
 const tabs = [
@@ -70,8 +73,8 @@ const activeTab = ref("links");
     z-index: 1;
   }
   .profile-picture {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     align-self: center;
@@ -88,7 +91,6 @@ const activeTab = ref("links");
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border-bottom: 1px solid var(--color-border);
 
     .title {
       font-size: 1.2rem;
